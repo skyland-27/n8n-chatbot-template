@@ -5,6 +5,8 @@
         .n8n-chat-widget {
             --chat--color-primary: var(--n8n-chat-primary-color, #854fff);
             --chat--color-secondary: var(--n8n-chat-secondary-color, #6b3fd4);
+            --chat--color-background: var(--n8n-chat-background-color, #ffffff);
+            --chat--color-font: var(--n8n-chat-font-color, #333333);
             font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
@@ -16,7 +18,7 @@
             display: none;
             width: 380px;
             height: 600px;
-            background: #ffffff;
+            background: var(--chat--color-background);
             border-radius: 12px;
             box-shadow: 0 8px 32px rgba(133, 79, 255, 0.15);
             border: 1px solid rgba(133, 79, 255, 0.2);
@@ -50,7 +52,7 @@
             transform: translateY(-50%);
             background: none;
             border: none;
-            color: #666;
+            color: var(--chat--color-font);
             cursor: pointer;
             padding: 4px;
             display: flex;
@@ -58,10 +60,11 @@
             justify-content: center;
             transition: color 0.2s;
             font-size: 20px;
+            opacity: 0.6;
         }
 
         .n8n-chat-widget .close-button:hover {
-            color: #333;
+            opacity: 1;
         }
 
         .n8n-chat-widget .brand-header img {
@@ -72,7 +75,7 @@
         .n8n-chat-widget .brand-header span {
             font-size: 18px;
             font-weight: 500;
-            color: #333;
+            color: var(--chat--color-font);
         }
 
         .n8n-chat-widget .new-conversation {
@@ -89,7 +92,7 @@
         .n8n-chat-widget .welcome-text {
             font-size: 24px;
             font-weight: 600;
-            color: #333;
+            color: var(--chat--color-font);
             margin-bottom: 24px;
             line-height: 1.3;
         }
@@ -124,7 +127,8 @@
 
         .n8n-chat-widget .response-text {
             font-size: 14px;
-            color: #666;
+            color: var(--chat--color-font);
+            opacity: 0.7;
             margin: 0;
         }
 
@@ -142,7 +146,7 @@
             flex: 1;
             overflow-y: auto;
             padding: 20px;
-            background: #f8f9fa;
+            background: var(--chat--color-background);
             display: flex;
             flex-direction: column;
         }
@@ -159,23 +163,23 @@
 
         .n8n-chat-widget .chat-message.user {
             background: linear-gradient(135deg, var(--chat--color-primary) 0%, var(--chat--color-secondary) 100%);
-            color: #ffffff;
+            color: white;
             align-self: flex-end;
             box-shadow: 0 4px 12px rgba(133, 79, 255, 0.2);
             border: none;
         }
 
         .n8n-chat-widget .chat-message.bot {
-            background: #ffffff;
+            background: var(--chat--color-background);
             border: 1px solid rgba(133, 79, 255, 0.2);
-            color: #333;
+            color: var(--chat--color-font);
             align-self: flex-start;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
 
         .n8n-chat-widget .chat-input {
             padding: 16px;
-            background: #ffffff;
+            background: var(--chat--color-background);
             border-top: 1px solid rgba(133, 79, 255, 0.1);
             display: flex;
             gap: 8px;
@@ -186,15 +190,16 @@
             padding: 12px;
             border: 1px solid rgba(133, 79, 255, 0.2);
             border-radius: 8px;
-            background: #ffffff;
-            color: #333;
+            background: var(--chat--color-background);
+            color: var(--chat--color-font);
             resize: none;
             font-family: inherit;
             font-size: 14px;
         }
 
         .n8n-chat-widget .chat-input textarea::placeholder {
-            color: #999;
+            color: var(--chat--color-font);
+            opacity: 0.6;
         }
 
         .n8n-chat-widget .chat-input button {
@@ -250,7 +255,7 @@
         .n8n-chat-widget .chat-footer {
             padding: 8px;
             text-align: center;
-            background: #ffffff;
+            background: var(--chat--color-background);
             border-top: 1px solid rgba(133, 79, 255, 0.1);
         }
 
@@ -298,7 +303,9 @@
         style: {
             primaryColor: '',
             secondaryColor: '',
-            position: 'right'
+            position: 'right',
+            backgroundColor: '#ffffff',
+            fontColor: '#333333'
         }
     };
 
@@ -323,6 +330,8 @@
     // Set CSS variables for colors
     widgetContainer.style.setProperty('--n8n-chat-primary-color', config.style.primaryColor);
     widgetContainer.style.setProperty('--n8n-chat-secondary-color', config.style.secondaryColor);
+    widgetContainer.style.setProperty('--n8n-chat-background-color', config.style.backgroundColor);
+    widgetContainer.style.setProperty('--n8n-chat-font-color', config.style.fontColor);
 
     const chatContainer = document.createElement('div');
     chatContainer.className = `chat-container${config.style.position === 'left' ? ' position-left' : ''}`;
