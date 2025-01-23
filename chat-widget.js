@@ -40,6 +40,28 @@
             align-items: center;
             gap: 12px;
             border-bottom: 1px solid rgba(133, 79, 255, 0.1);
+            position: relative;
+        }
+
+        .n8n-chat-widget .close-button {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #666;
+            cursor: pointer;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s;
+            font-size: 20px;
+        }
+
+        .n8n-chat-widget .close-button:hover {
+            color: #333;
         }
 
         .n8n-chat-widget .brand-header img {
@@ -309,6 +331,7 @@
         <div class="brand-header">
             <img src="${config.branding.logo}" alt="${config.branding.name}">
             <span>${config.branding.name}</span>
+            <button class="close-button">×</button>
         </div>
         <div class="new-conversation">
             <h2 class="welcome-text">${config.branding.welcomeText}</h2>
@@ -453,5 +476,11 @@
     
     toggleButton.addEventListener('click', () => {
         chatContainer.classList.toggle('open');
+    });
+
+    // Add close button handler
+    const closeButton = chatContainer.querySelector('.close-button');
+    closeButton.addEventListener('click', () => {
+        chatContainer.classList.remove('open');
     });
 })();
