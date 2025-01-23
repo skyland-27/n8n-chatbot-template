@@ -347,6 +347,11 @@
 
     const chatInterfaceHTML = `
         <div class="chat-interface">
+            <div class="brand-header">
+                <img src="${config.branding.logo}" alt="${config.branding.name}">
+                <span>${config.branding.name}</span>
+                <button class="close-button">×</button>
+            </div>
             <div class="chat-messages"></div>
             <div class="chat-input">
                 <textarea placeholder="Type your message here..." rows="1"></textarea>
@@ -402,6 +407,7 @@
             });
 
             const responseData = await response.json();
+            chatContainer.querySelector('.brand-header').style.display = 'none';
             chatContainer.querySelector('.new-conversation').style.display = 'none';
             chatInterface.classList.add('active');
 
@@ -478,9 +484,11 @@
         chatContainer.classList.toggle('open');
     });
 
-    // Add close button handler
-    const closeButton = chatContainer.querySelector('.close-button');
-    closeButton.addEventListener('click', () => {
-        chatContainer.classList.remove('open');
+    // Add close button handlers
+    const closeButtons = chatContainer.querySelectorAll('.close-button');
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            chatContainer.classList.remove('open');
+        });
     });
 })();
