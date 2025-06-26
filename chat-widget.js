@@ -17,8 +17,8 @@
             z-index: 1000;
             display: none;
 <!--changing below w & h numbers-->
-            width: 60vw;
-            height: 90vh;
+            width: 100vw;
+            height: 100vh;
             background: var(--chat--color-background);
 <!--changing below radius numbers-->
             border-radius: 0px;
