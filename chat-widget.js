@@ -273,8 +273,8 @@
         }
         @media (max-width: 600px) {
             .n8n-chat-widget .chat-container {
-                width: 100vw !important;
-                height: 100vh !important;
+                width: 90vw !important;
+                height: 80vh !important;
                 left: 0 !important;
                 right: 0 !important;
                 border-radius: 0 !important;
