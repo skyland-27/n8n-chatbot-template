@@ -21,7 +21,7 @@
             height: 100vh;
             background: var(--chat--color-background);
 <!--changing below radius numbers-->
-            border-radius: 0px;
+            border-radius: 12px;
             box-shadow: 0 8px 32px rgba(133, 79, 255, 0.15);
             border: 1px solid rgba(133, 79, 255, 0.2);
             overflow: hidden;
