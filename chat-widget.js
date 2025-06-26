@@ -16,8 +16,8 @@
             right: 20px;
             z-index: 1000;
             display: none;
-            width: 380px;
-            height: 600px;
+            width: 180px;
+            height: 300px;
             background: var(--chat--color-background);
             border-radius: 12px;
             box-shadow: 0 8px 32px rgba(133, 79, 255, 0.15);
@@ -273,7 +273,7 @@
         }
         @media (max-width: 600px) {
             .n8n-chat-widget .chat-container {
-                width: 90vw !important;
+                width: 60vw !important;
                 height: 80vh !important;
                 left: 0 !important;
                 right: 0 !important;
