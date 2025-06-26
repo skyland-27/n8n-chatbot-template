@@ -16,11 +16,9 @@
             right: 20px;
             z-index: 1000;
             display: none;
-<!--changing below w & h numbers width: 100vw; height: 100vh-->
             width: 380px;
             height: 600px;
             background: var(--chat--color-background);
-<!--changing below radius numbers-->
             border-radius: 12px;
             box-shadow: 0 8px 32px rgba(133, 79, 255, 0.15);
             border: 1px solid rgba(133, 79, 255, 0.2);
