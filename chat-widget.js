@@ -16,10 +16,12 @@
             right: 20px;
             z-index: 1000;
             display: none;
-            width: 380px;
-            height: 600px;
+<!--changing below w & h numbers-->
+            width: 100vw;
+            height: 100vh;
             background: var(--chat--color-background);
-            border-radius: 12px;
+<!--changing below radius numbers-->
+            border-radius: 0px;
             box-shadow: 0 8px 32px rgba(133, 79, 255, 0.15);
             border: 1px solid rgba(133, 79, 255, 0.2);
             overflow: hidden;
