@@ -273,6 +273,17 @@
         .n8n-chat-widget .chat-footer a:hover {
             opacity: 1;
         }
+<!--adding @media for mobilescreen-->
+        @media (max-width: 600px) {
+          .n8n-chat-widget .chat-container {
+            width: 100vw !important;
+            height: 100vh !important;
+            left: 0 !important;
+            right: 0 !important;
+            border-radius: 0 !important;
+            font-size: 16px !important;
+  }
+}
     `;
 
     // Load Geist font
