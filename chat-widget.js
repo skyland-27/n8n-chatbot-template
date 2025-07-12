@@ -272,6 +272,7 @@
             opacity: 1;
         }
 //ADDED for mobile
+/*
         @media (max-width: 600px) {
             .n8n-chat-widget .chat-container {
                 width: 80vw !important;
@@ -281,7 +282,7 @@
                 border-radius: 0 !important;
                 font-size: 16px !important;
             }
-        }
+        }*/
     `;
 
     // Load Geist font
