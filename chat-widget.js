@@ -9,15 +9,15 @@
             --chat--color-font: var(--n8n-chat-font-color, #333333);
             font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
-
+//EDIT below for mobile
         .n8n-chat-widget .chat-container {
             position: fixed;
             bottom: 20px;
             right: 20px;
             z-index: 1000;
             display: none;
-            width: 180px;
-            height: 300px;
+            width: 380px;
+            height: 600px;
             background: var(--chat--color-background);
             border-radius: 12px;
             box-shadow: 0 8px 32px rgba(133, 79, 255, 0.15);
@@ -271,6 +271,7 @@
         .n8n-chat-widget .chat-footer a:hover {
             opacity: 1;
         }
+//ADDED for mobile
         @media (max-width: 600px) {
             .n8n-chat-widget .chat-container {
                 width: 60vw !important;
