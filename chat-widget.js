@@ -274,7 +274,7 @@
 //ADDED for mobile
         @media (max-width: 600px) {
             .n8n-chat-widget .chat-container {
-                width: 60vw !important;
+                width: 80vw !important;
                 height: 80vh !important;
                 left: 0 !important;
                 right: 0 !important;
